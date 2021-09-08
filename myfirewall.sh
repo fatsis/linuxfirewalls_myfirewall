@@ -40,8 +40,7 @@ iptables -A myfirewall.rules -p udp --dport 5353 -d 224.0.0.251 -j ACCEPT
 # for the Internet Printing Protocol (IPP):
 iptables -A myfirewall.rules -p udp -m udp --dport 631 -j ACCEPT
 
-# Accept all packets that are in the states ESTABLISHED and RELATED (See
-# Section 18.11 for packet states):
+# Accept all packets that are in the states ESTABLISHED and RELATED 
 iptables -A myfirewall.rules -p all -m state --state ESTABLISHED,RELATED -j ACCEPT
 
 # I run SSH server on my laptop.  Accept incoming connection requets:
